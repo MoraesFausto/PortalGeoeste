@@ -31,8 +31,8 @@ export const Teams = () => {
                                             style={{width:"120px", height:"140px"}}
                                         />
                                         <h6 className="name">{member.name}</h6>
-                                        <h7> Lattes: <a href={member.lattes}>{member.lattes}</a> </h7>
-                                        { member.git? (<h7> Github: <a href={member.git}> {member.git} </a> </h7>) : null }
+                                        <p> Lattes: <a href={member.lattes}>{member.lattes}</a> </p>
+                                        { member.git? (<p> Github: <a href={member.git}> {member.git} </a> </p>) : null }
                                     </li>
                                 )
                             })}
