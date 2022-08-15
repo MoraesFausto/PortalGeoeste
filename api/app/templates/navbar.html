@@ -1,0 +1,45 @@
+<head>
+<style>
+.nb {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color:rgb(8,165,238);
+}
+
+.nb li {
+float: left;
+}
+
+.nb li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.nb li a:hover:not(.active) {
+background-color:white;
+text-decoration: none;
+color: rgb(8,165,238);
+}
+</style>
+</head>
+
+<body>
+
+  <ul class="nb">
+    <li><a href="/home">Portal Geoeste</a></li>
+    <li><a href="/dados">Dados</a></li>
+    <li><a href="/downloads">Downloads</a></li>
+    <li style="float:right">{% if current_user.is_authenticated %}
+    <a href="/logout">Sair</a>
+    {% else %}
+    <a class="dropbtn" href="/login">Entrar</a>
+    {% endif %}</li>
+  </ul>
+</body>
+
+
