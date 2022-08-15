@@ -63,6 +63,7 @@ member_model=data_ns.model(
         "id":fields.Integer(),
         "name":fields.String(255),
         "lattes":fields.String(255),
+        "git":fields.String(30),
         "member_team_id":fields.Integer()
     }
 )

@@ -42,6 +42,7 @@ export type Member = {
   id:number,
   name:string,
   lattes:string,
+  git: string,
 }
 
 export type Team = {

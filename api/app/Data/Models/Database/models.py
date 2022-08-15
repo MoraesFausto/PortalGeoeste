@@ -58,6 +58,7 @@ class Member(db.Model):
     id=db.Column(db.Integer(), primary_key=True)
     name=db.Column(db.String(255), nullable=True)
     lattes=db.Column(db.String(255), nullable=True)
+    git=db.Column(db.String(30), nullable=True)
     member_team_id=db.Column(db.Integer(), db.ForeignKey('team.id'), nullable=True)
 
 class Team(db.Model):
