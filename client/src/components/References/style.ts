@@ -5,12 +5,11 @@ export const Info = styled.div`
 div{
     position: absolute;
     right: 15px;
-    margin-top: 37%;
+    margin-top: 25%;
     margin-left: 15px;
     background-color: rgba(201, 231, 242, 0.75);
-    width: 25vw;
-    min-width: 15vw;
-    max-height: 25%;
+    width: 26vw;
+    max-height: 30%;
     z-index: 10000;
     text-align:justify;
     border: 1px solid rgb(8, 165, 238);

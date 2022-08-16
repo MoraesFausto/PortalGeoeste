@@ -6,7 +6,7 @@ export function Legend({info:legend, atr: atr_n}){
 
   if(atr_n != null){
     return (
-      <Container side={'right'} w={'25vw'} h={'32vh'}> 
+      <Container side={'right'} w={'25vw'} h={'19vw'}> 
         <div>
           <h3>{atr_n}</h3>
           <UL>

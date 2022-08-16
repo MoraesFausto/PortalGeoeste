@@ -8,7 +8,7 @@ import {Element} from "../Element/Element";
 export const Section = ({id:url}) =>{
   const {data: subs, isFetching} = useFetch<Category[]>('/api/Data/mapas/categorias');
     return(
-    <Container side={'left'} w={'30vw'} h={'32vh'} align={'center'}>
+    <Container side={'left'} w={'30vw'} h={'18vw'} align={'center'}>
       <div style={{"textAlign":"center"}}>
         {subs?.map((sub)=>{
           return(
