@@ -14,6 +14,7 @@ export const Teams = () => {
                 <br/>
                 <Ul>
                 {teams?.map((team) => {
+                    
                     return(
                         <li key={team.id} style={{listStyle:"none"}}>
                             <h4 className="subtitle">{team.description}</h4>
@@ -34,7 +35,7 @@ export const Teams = () => {
                                         />
                                         <h6 className="name">{member.name}</h6>
                                         <p> Lattes: <a href={member.lattes}>{member.lattes}</a> </p>
-                                        { member.member_team_id == 4? (<p> Github: <a href={member.git}> {member.git} </a> </p>) : null }
+                                        { member.member_team_id === 4? (<p> Github: <a href={member.git}> {member.git} </a> </p>) : null }
                                     </li>
                                 )
                             })}

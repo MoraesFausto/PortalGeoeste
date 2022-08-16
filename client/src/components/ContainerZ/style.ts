@@ -16,7 +16,7 @@ div{
     padding-right: 1vw;
     position: absolute;
    ${props=>props.side}: 0;
-    margin-top: 1%;
+    margin-top: 1vw;
     margin-${props=>props.side}: 15px;
     background-color: rgba(201, 231, 242, 0.75);
     width: ${props=>props.w};

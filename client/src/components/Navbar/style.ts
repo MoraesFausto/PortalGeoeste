@@ -115,7 +115,7 @@ body {
   font-family: sans-serif;
 }
   position: absolute;
-  top: 25%;
+  top: 10vw;
   left: 90%;
   transform: translate(-50%, -50%);
   background: none;
