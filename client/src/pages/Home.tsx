@@ -3,6 +3,7 @@ import { User } from '../interfaces';
 import '../styles/style.css'
 import { Form1 } from '../components/Forms/style';
 import { Auth } from '../hooks/useAuth';
+import { Logo } from '../components/Logo/Logo';
 
 const Home: React.FC = () =>{
 
@@ -22,8 +23,7 @@ const Home: React.FC = () =>{
                 </div>
             ): err && !check ?(
                 <div>
-                <h2>Projeto Geoeste</h2>
-            <h3>Portal de Dados Ambientais e Agropecuários da Mesorregião Oeste do Paraná</h3>
+                <Logo/>
 
             <div>
                 <Form1 className='box' method="post">
