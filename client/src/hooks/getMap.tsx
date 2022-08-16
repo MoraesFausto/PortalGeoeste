@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import  api  from "../services/api";
 import { Loading } from "../components/Loading/Loading";
 import { NotFound } from "../components/NotFound/NotFound";
-import Download from "../pages/DownloadFile";
+import Download from "../components/Button/DownloadFile";
 import { useFetch } from "./useFetching";
 import { Map } from "../types";
 import { StaticMaps } from "../pages/StaticMaps";

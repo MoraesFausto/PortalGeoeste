@@ -3,7 +3,7 @@ import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { Section } from "../Section/Section";
 import { Legend } from "../Legend/Legend";
 import Reference from "../References/Reference";
-import Download from "../../pages/DownloadFile";
+import Download from "../Button/DownloadFile";
 
 
 function style(feature: any) {
@@ -48,7 +48,7 @@ function style(feature: any) {
             <Legend info={props.graphic?.map_legs} atr={props.graphic?.map_atr} />
             <Reference info={props.graphic?.map_refs}/>
             <ZoomControl position="bottomright"/>
-            <Download param={props.graphic?.map_id} p={'12'}/>
+            <Download param={props.graphic?.map_id} p={'10'}/>
           </MapContainer>
     )
   }

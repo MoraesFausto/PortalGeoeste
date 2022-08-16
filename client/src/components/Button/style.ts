@@ -24,7 +24,7 @@ export const DownloadBtn = styled.div<BtnProps>`
   transition: 0.25s;
   cursor: pointer;
   left: 47%;
-  bottom: ${props=>props.p}%;
+  bottom: ${props=>props.p}vw;
 
 }
 button[type="button"]:hover {

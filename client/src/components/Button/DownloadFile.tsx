@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { DateTime } from "luxon";
-import { useDownload } from "../hooks/useDownload";
-import { Button, ButtonState } from "../components/Button/Button";
+import { useDownload } from "../../hooks/useDownload";
+import { Button, ButtonState } from "./Button";
 import { Alert, Container } from "react-bootstrap";
-import { DownloadBtn } from "../components/Button/style";
+import { DownloadBtn } from "./style";
 import { Navigate } from "react-router-dom";
 
 function Download({param:id, p:pos}){
