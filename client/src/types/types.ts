@@ -42,7 +42,8 @@ export type Member = {
   id:number,
   name:string,
   lattes:string,
-  git?: string,
+  git?: string | null,
+  member_team_id: number,
 }
 
 export type Team = {

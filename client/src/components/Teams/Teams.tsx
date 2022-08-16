@@ -34,7 +34,7 @@ export const Teams = () => {
                                         />
                                         <h6 className="name">{member.name}</h6>
                                         <p> Lattes: <a href={member.lattes}>{member.lattes}</a> </p>
-                                        { member.git? (<p> Github: <a href={member.git}> {member.git} </a> </p>) : null }
+                                        { member.git ? (<p> Github: <a href={member.git}> {member.git} </a> </p>) : null }
                                     </li>
                                 )
                             })}
