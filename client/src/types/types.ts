@@ -42,7 +42,7 @@ export type Member = {
   id:number,
   name:string,
   lattes:string,
-  git?: string | null,
+  git?: string,
   member_team_id: number,
 }
 
