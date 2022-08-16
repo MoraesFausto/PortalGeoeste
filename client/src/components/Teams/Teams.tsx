@@ -20,6 +20,8 @@ export const Teams = () => {
                         
                             <ul>
                             {team.members.map((member) => {
+                                console.log(member.git);
+
                                 return(
                                     <li key={member.id} 
                                         style={
