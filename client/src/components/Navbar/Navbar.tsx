@@ -55,6 +55,9 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page,  status}) => {
           </LogoutButton>
         )
         }
+        <br/>
+        <br/>
+        <br/>
     </div>
   );
 };

@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components';
-import compass_with_p_white from '../../assets/compass_with_p_white.png';
-import compass_with_p_blue from '../../assets/compass_with_p_blue.png';
 
 
 
@@ -21,7 +19,6 @@ export const Nav = styled.nav`
   -webkit-box-shadow: 0px 10px 14px -15px rgba(138, 138, 138, 1);
   -moz-box-shadow: 0px 10px 14px -15px rgba(138, 138, 138, 1);
   box-shadow: 0px 10px 14px -15px rgba(138, 138, 138, 1);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 20000; 

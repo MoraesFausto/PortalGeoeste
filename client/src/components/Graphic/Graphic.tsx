@@ -41,14 +41,14 @@ function style(feature: any) {
 
   export const Graphic: React.FC<GraphicProps> = (props) => {
     return(
-            <MapContainer style={{ height: "100vh" }} zoom={8} center={[-24.8, -53.75]} id="mapId" attributionControl={false} zoomControl={false} >
+            <MapContainer style={{ height: "100vh", }} zoom={8} center={[-24.8, -53.75]} id="mapId" attributionControl={false} zoomControl={false} >
             <TileLayer url="https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png" />
             <GeoJSON data={JSON.parse(props.data)} style={style} onEachFeature={onEachFeature} />
             <Section id={props.graphic?.map_id}/>
             <Legend info={props.graphic?.map_legs} atr={props.graphic?.map_atr} />
             <Reference info={props.graphic?.map_refs}/>
             <ZoomControl position="bottomright"/>
-            <Download param={props.graphic?.map_id} p={'10'}/>
+            <Download param={props.graphic?.map_id} p={'20'}/>
           </MapContainer>
     )
   }

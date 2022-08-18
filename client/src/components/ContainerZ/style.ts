@@ -9,10 +9,12 @@ export type containerProps = {
 
 export const Container = styled.div<containerProps>`
 
-div{
     h3{
       text-align: center;
+      position: sticky;
+      
     }
+
     padding-right: 1vw;
     position: absolute;
    ${props=>props.side}: 0;
@@ -32,7 +34,7 @@ div{
   
   /* width */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   /* Track */
@@ -53,7 +55,6 @@ div{
   ::-webkit-scrollbar-thumb:hover {
       background: rgba(29, 162, 240, 0.75);
 
-  }
   }
 
 `

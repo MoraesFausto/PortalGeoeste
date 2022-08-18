@@ -1,5 +1,5 @@
 import { DropDownProps } from "../../interfaces"
-import { Item } from "../Section/style"
+import { Li } from "./style"
 
 export const DropDown: React.FC<DropDownProps> = (props) => {
     if(props.show){
@@ -8,15 +8,23 @@ export const DropDown: React.FC<DropDownProps> = (props) => {
                 {props?.subctg?.subctg_maps.map((map, index) => {
                     if(map.map_ctg !== 'Uso' &&map.map_id === props.id){
                         return(
-                            <Item key={map.map_id}>
-                            <a href={"/mapas/" + map.map_id} style={{"fontWeight":"900"}}> {map.map_desc}</a>
-                            </Item>
+                            <Li key={map.map_id}>
+                            <a href={"/mapas/" + map.map_id}> 
+                                <button style={{"fontWeight":"900", "outlineStyle":"none"}} className="btn" autoFocus>
+                                    {map.map_desc}
+                                </button>
+                            </a>
+                            </Li>
                         )
                     }else{
                         return(
-                            <li key={map.map_id}>
-                                <a href={'/mapas/' + map.map_id}> {map.map_desc} </a>
-                            </li>
+                            <Li key={map.map_id}>
+                                <a href={'/mapas/' + map.map_id}>
+                                    <button className="btn">
+                                        {map.map_desc}
+                                    </button>
+                                </a>
+                            </Li>
                         )
                     }
                 })}

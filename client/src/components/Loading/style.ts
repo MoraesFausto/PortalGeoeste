@@ -24,7 +24,7 @@ ul li {
 export const LoadingGif = styled.div`
 .center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 10%;
 }
 `
