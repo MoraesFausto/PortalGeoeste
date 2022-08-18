@@ -1,5 +1,5 @@
 import { useState } from "react";
-import DropDown from "../Dropdown/Dropdown";
+import { DropDown } from "../Dropdown/Dropdown";
 import { ElementLi, ElementStyle } from "./style";
 import { ElementProps } from "../../interfaces";
 
@@ -7,6 +7,7 @@ import { ElementProps } from "../../interfaces";
 export const Element: React.FC<ElementProps> = (props) => {
     const [show, setShow] = useState(false);
     const [transform, setTransform] = useState('none');
+    const [selected, setSelected] = useState(false);
 
     const handleButtonClick = async (subctg) =>{
         setShow(!show);
@@ -21,6 +22,14 @@ export const Element: React.FC<ElementProps> = (props) => {
     return(
         <ul key={props.id}>
         {props.ctgs?.ctg_subs.sort((a, b)=> a.subctg_id - b.subctg_id).map((repo, index) => {
+            repo?.subctg_maps.map((map) => {
+                if(map.map_id === props.id && !selected){
+                    repo.sel = true;
+                    repo.transform = 'translateX(10px) rotate(90deg)';
+                    setSelected(true);
+                }
+                return null;
+            })
             return (
                 <ElementLi key={repo.subctg_id} transform={repo.transform} >
                 <ElementStyle onClick={() => {
@@ -36,7 +45,7 @@ export const Element: React.FC<ElementProps> = (props) => {
                     {repo.subctg_desc}
                 </ElementStyle>
 
-                <DropDown subctg={repo} show={repo.sel} cod = {props.id}/>
+                <DropDown subctg={repo} show={repo.sel} id = {String(props.id)} graphic={true}/>
                 </ElementLi>
             )
         })}

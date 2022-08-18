@@ -20,6 +20,7 @@ div{
     margin-${props=>props.side}: 15px;
     background-color: rgba(201, 231, 242, 0.75);
     min-width: ${props=>props.w};
+    max-width: ${props=>props.w};
     height: ${props=>props.h};
     z-index: 10000;
     overflow-y:scroll;

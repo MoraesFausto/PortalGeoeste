@@ -1,4 +1,4 @@
-import { Category, Map } from "../types/types";
+import { Category, Map, SubCategory } from "../types/types";
 
 export interface User{
   id:String,
@@ -15,6 +15,14 @@ export interface DashboardProps {
 export interface ElementProps {
   ctgs: Category | null;
   id?: string;
+  graphic?: boolean;
+}
+
+export interface DropDownProps {
+  subctg: SubCategory | null;
+  id: string;
+  graphic?: boolean;
+  show: boolean;
 }
 
 export interface GraphicProps {

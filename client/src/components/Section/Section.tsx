@@ -15,7 +15,7 @@ export const Section = ({id:url}) =>{
             <Ul key={sub?.ctg_id}>
               <h2>Estudo {sub?.ctg_desc}</h2>
               {isFetching && <img src={require('../../assets/utils/loading.gif')} alt="loading..." className='center'/>}
-                {<Element ctgs={sub} id={url}/>}
+                {<Element ctgs={sub} id={url} graphic={true}/>}
             </Ul>
             )
         })}
