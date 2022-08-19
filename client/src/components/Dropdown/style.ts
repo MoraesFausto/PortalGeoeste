@@ -5,6 +5,7 @@ export const Li = styled.li`
 
 
 margin-bottom:5px;
+font-size:.8em;
 a:hover {
         color:rgb(4, 107, 224);
         text-decoration: none;
@@ -14,7 +15,7 @@ a:hover {
 .btn{
   background: none!important;
   border: none;
-  font-size:.84vw;
+  font-size:1.1vw;
   color:  rgb(4, 107, 224);
 
   :hover{

@@ -15,7 +15,6 @@ export function useFetch<T = unknown>(url:string, options?:AxiosRequestConfig){
             })
             .catch(function (error){
                 if(error.response){
-                    console.log(error.data);
                     setErr(true);
                 }
             })
