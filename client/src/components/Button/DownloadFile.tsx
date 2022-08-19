@@ -8,7 +8,7 @@ import { DownloadBtn } from "./style";
 import { Navigate } from "react-router-dom";
 
 function Download({param:id, p:pos}){
-  const path = "api/Data/mapas/"+ String(id) + "/download"
+  const path = "/api/Data/mapas/"+ String(id) + "/download"
   const DownloadFile: React.FC = () => {
   const [buttonState, setButtonState] = useState<ButtonState>(
     ButtonState.Primary
