@@ -48,7 +48,7 @@ function style(feature: any) {
             <Legend info={props.graphic?.map_legs} atr={props.graphic?.map_atr} />
             <Reference info={props.graphic?.map_refs}/>
             <ZoomControl position="bottomright"/>
-            <Download param={props.graphic?.map_id} p={'15'}/>
+            <Download param={props.graphic?.map_id} p={'15'} l={'47'}/>
           </MapContainer>
     )
   }

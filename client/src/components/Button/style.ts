@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export type BtnProps = {
   p: string;
+  l: string;
 }
 
 export const DownloadBtn = styled.div<BtnProps>`
@@ -23,7 +24,7 @@ export const DownloadBtn = styled.div<BtnProps>`
   border-radius: 22px;
   transition: 0.25s;
   cursor: pointer;
-  left: 47%;
+  left: ${props=>props.l}%;
   bottom: ${props=>props.p}vh;
 
 }
