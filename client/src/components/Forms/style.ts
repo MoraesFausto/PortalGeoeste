@@ -13,10 +13,10 @@ body {
   width: 300px;
   padding: 40px;
   position: absolute;
-  top: 60%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: none;
   border: 1px solid rgb(8, 165, 238);
   text-align: center;
 
