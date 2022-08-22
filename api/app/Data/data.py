@@ -72,7 +72,7 @@ class MapResource(Resource):
 
         if mapa and mapa.choropleth != 1:
             if mapa.map_atr:
-                if mapa.map_ctg:
+                if mapa.map_ctg != None and mapa.map_ctg != 'Geologia':
                     sql='SELECT geometry, colors, NOME, atr  FROM ' + mapa.map_id
                 else:
                     sql='SELECT geometry, colors, atr FROM ' + mapa.map_id
@@ -111,7 +111,7 @@ class MapResource(Resource):
             if not mapa.map_ctg:
                 return send_file('Data/repository/' + id+'.zip', as_attachment=True)
             else:
-                return send_file('Data/repository/' + mapa.map_ctg + '.zip', as_attachment=True)
+                return send_file('Data/repository/' + mapa.map_ctg + '.zip', as_attachment=True, cache_timeout=0)
         else:
             return {"Error":"No data found"}, 404
 

@@ -18,7 +18,7 @@ function GetMap({ prop:id }) {
       <div>
         <h2>{map?.map_desc}</h2>
         <StaticMaps info={map?.map_id}/>
-        <Download param={map?.map_id} p={'-1'} l={'8'}/>
+        <Download param={map?.map_id} p={'50'} l={'8'}/>
       </div>
 
     )

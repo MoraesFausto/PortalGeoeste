@@ -86,7 +86,6 @@ def create_app(config):
     register_extensions(app)
     api=Api(app, doc="/docs")
     api.add_namespace(data_ns)
-    print("Yep! Finished")
 
     return app
 
