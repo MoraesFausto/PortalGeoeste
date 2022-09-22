@@ -61,7 +61,7 @@ function Download({param:id, p:pos, l:lef}) {
       <DownloadBtn p={pos} l={lef}>
       <a href={url} download={name} className="hidden" ref={ref} />
       <div>
-      <Button label="Download" buttonState={buttonState} onClick={download} />
+      <Button label="Download" buttonState={buttonState} onClick={download}/>
       </div>
       </DownloadBtn>
     </Container>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Button as InternalButton } from "react-bootstrap";
 
 export enum ButtonState {
   Primary = "Primary",

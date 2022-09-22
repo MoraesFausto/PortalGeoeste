@@ -17,7 +17,7 @@ export default function Categorias() {
 
         return(
           <Ul>
-            <h2>Estudo {sub?.ctg_desc}</h2>
+            <h2>Estudos {sub?.ctg_desc}</h2>
             {isFetching && <img src={require('../assets/utils/loading.gif')} alt="loading..." className='center'/>}
             {<Element ctgs={sub} /> }
           </Ul>

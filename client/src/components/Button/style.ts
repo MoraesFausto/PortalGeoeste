@@ -26,7 +26,7 @@ export const DownloadBtn = styled.div<BtnProps>`
   cursor: pointer;
   left: ${props=>props.l}%;
   bottom: ${props=>props.p}vh;
-
+  outline-style: none;
 }
 button[type="button"]:hover {
   background: rgb(4, 107, 224);
