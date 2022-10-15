@@ -1,54 +1,54 @@
 
 build:
-docker:
-  postgres_pg:
-    image: postgis/postgis
-    restart: unless-stopped
-    config:
-      POSTGRES_PASSWORD: postgres_pg
-      POSTGRES_DB: postgres_pg
-      POSTGRES_USER: postgres_pg
-    ports:
-      - '5432:5432'   
-    volumes:
-      - ./postgres_pg:/var/lib/postgresql/data
-      - ./geodatabase.sql:/docker-entrypoint-initdb.d/geodatabase.sql
-  redis_pg:
-    image: redis:alpine
-    ports:
-      - '6379:6379'
+  docker:
+    postgres_pg:
+      image: postgis/postgis
+      restart: unless-stopped
+      config:
+        POSTGRES_PASSWORD: postgres_pg
+        POSTGRES_DB: postgres_pg
+        POSTGRES_USER: postgres_pg
+      ports:
+        - '5432:5432'   
+      volumes:
+        - ./postgres_pg:/var/lib/postgresql/data
+        - ./geodatabase.sql:/docker-entrypoint-initdb.d/geodatabase.sql
+    redis_pg:
+      image: redis:alpine
+      ports:
+        - '6379:6379'
 
-    volumes:
-      - ./data/redis:/data
+      volumes:
+        - ./data/redis:/data
 
-  api-portal-geoeste:
-    container_name: api-portal-geoeste
-    restart: unless-stopped
-    image: api-portal-geoeste-prod
-    build:
-      context: api
-      dockerfile: Dockerfile
-    config:
-      REDIS_URL: postgres_pg     
-      SECRET_KEY: postgres_pg      
-      SQLALCHEMY_DATABASE_URI: postgresql://postgres_pg:postgres_pg@postgres_pg:5432/postgres_pg
-    ports:
-      - '5000:5000'
+    api-portal-geoeste:
+      container_name: api-portal-geoeste
+      restart: unless-stopped
+      image: api-portal-geoeste-prod
+      build:
+        context: api
+        dockerfile: Dockerfile
+      config:
+        REDIS_URL: postgres_pg     
+        SECRET_KEY: postgres_pg      
+        SQLALCHEMY_DATABASE_URI: postgresql://postgres_pg:postgres_pg@postgres_pg:5432/postgres_pg
+      ports:
+        - '5000:5000'
 
-    depends_on:
-      - postgres_pg
-      - redis_pg
-    
-  client-portal-geoeste:
-    container_name: client-portal-geoeste
-    restart: unless-stopped
-    image: client-portal-geoeste-prod
-    build:
-      context: client
-      dockerfile: Dockerfile
-    ports:
-      - '3000:80'
+      depends_on:
+        - postgres_pg
+        - redis_pg
+      
+    client-portal-geoeste:
+      container_name: client-portal-geoeste
+      restart: unless-stopped
+      image: client-portal-geoeste-prod
+      build:
+        context: client
+        dockerfile: Dockerfile
+      ports:
+        - '3000:80'
 
-    depends_on:
-      - api-portal-geoeste
+      depends_on:
+        - api-portal-geoeste
 
